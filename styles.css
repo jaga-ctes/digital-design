@@ -7,7 +7,7 @@
    ============================================================ */
 
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #060810; }
+body { margin: 0; background: #060810; overflow-x: hidden; }
 a { color: #00f3ff; }
 a:hover { color: #7fe9f0; }
 
@@ -60,6 +60,7 @@ a:hover { color: #7fe9f0; }
 /* ============================================================
    Navegación — menú mobile
    ============================================================ */
+#nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }
 .nav-toggle { display: none; }
 
 @media (max-width: 1024px) {

@@ -58,6 +58,8 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); box-shadow: 0 0 24px r
 .jaga-field textarea { resize: vertical; }
 .jaga-field select option { background: #060810; }
 .jaga-contact__meta { font-family: 'Share Tech Mono', monospace; color: #8a9aa0; }
+/* Selector de marcas del footer con la tipografía y el gris de los enlaces del pie */
+footer .jaga-switcher { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; letter-spacing: 1px; color: #8a9aa0; }
 
 @keyframes jaga-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 @keyframes jaga-scan { 0% { background-position: 0 0; } 100% { background-position: 0 4px; } }

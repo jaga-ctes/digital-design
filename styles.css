@@ -166,9 +166,20 @@ a.dd-chip, a.dd-chip:hover {
    Portafolio
    ============================================================ */
 .dd-portfolio { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 24px; }
-.dd-case { border: 1px solid rgba(0,243,255,0.25); clip-path: polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px); overflow: hidden; }
-.dd-case__media { width: 100%; aspect-ratio: 4/3; }
-.dd-case__label { margin: 0; padding: 12px 16px; font-family: 'VT323', monospace; font-size: 1.1rem; letter-spacing: 1px; color: #7fd9e0; background: rgba(11,15,26,0.9); }
+.dd-case {
+  display: flex; flex-direction: column; background: rgba(11,15,26,0.9); border: 1px solid rgba(0,243,255,0.25); overflow: hidden;
+  clip-path: polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
+}
+.dd-case__img { display: block; width: 100%; height: auto; aspect-ratio: 1200/750; object-fit: cover; border-bottom: 1px solid rgba(0,243,255,0.25); }
+.dd-case__body { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 18px; }
+.dd-case__tag { font-family: 'VT323', monospace; font-size: 1.1rem; letter-spacing: 1px; color: #7fd9e0; margin: 0 0 6px; }
+.dd-case__list { list-style: none; margin: 0 0 12px; padding: 0; font-size: 0.9rem; line-height: 1.5; color: #8a9aa0; }
+.dd-case__list li { position: relative; padding-left: 18px; margin-bottom: 6px; }
+.dd-case__list li::before { content: "›"; position: absolute; left: 2px; color: #00f3ff; }
+a.dd-case__link { display: inline-flex; align-items: center; min-height: 44px; margin-top: auto; font-size: 0.85rem; letter-spacing: 1px; word-break: break-all; }
+.dd-case--cta { justify-content: center; background: rgba(0,243,255,0.04); border-style: dashed; }
+.dd-case--cta .dd-case__body { justify-content: center; align-items: flex-start; gap: 4px; }
+.dd-case--cta .dd-text { margin-bottom: 20px; }
 
 /* ============================================================
    Contacto
@@ -188,24 +199,6 @@ a.dd-chip, a.dd-chip:hover {
 a.dd-footer__link, a.dd-footer__link:hover { text-decoration: none; color: #8a9aa0; }
 .dd-footer__switch { max-width: 1100px; margin: 16px auto 0; }
 .dd-footer__legal { max-width: 1100px; margin: 24px auto 0; font-family: 'Share Tech Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: #4a5a60; }
-
-/* ============================================================
-   Placeholders de portafolio
-   El diseño original usaba <image-slot>, un componente del editor
-   para completar con imágenes reales más adelante. Estos son su
-   reemplazo plano — reemplazá cada uno por un <img> cuando tengas
-   las piezas del portafolio.
-   ============================================================ */
-.portfolio-placeholder {
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 20px;
-  background: rgba(0,243,255,0.04);
-  border: 1px dashed rgba(0,243,255,0.25);
-  color: #4a5a60;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
 
 /* ============================================================
    Navegación — menú mobile

@@ -59,6 +59,8 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); box-shadow: 0 0 24px r
 .jaga-contact__meta { font-family: 'Share Tech Mono', monospace; color: #8a9aa0; }
 /* Selector de marcas del footer con la tipografía y el gris de los enlaces del pie */
 footer .jaga-switcher { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; letter-spacing: 1px; color: #8a9aa0; }
+/* A 375 px las tres marcas entran en una línea con menos separación (misma letra, mismos 44 px) */
+@media (max-width: 400px) { footer .jaga-switcher ul { column-gap: 12px; } }
 /* Este sitio no usa box-sizing: border-box global; sin esto el min-height de 44 px se suma al padding */
 .jaga-switcher a, .jaga-btn, .jaga-field input, .jaga-field select, .jaga-field textarea { box-sizing: border-box; }
 
@@ -104,7 +106,7 @@ a.dd-nav-link, a.dd-nav-link:hover {
 a.dd-chip, a.dd-chip:hover {
   display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box;
   font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; letter-spacing: 1px; text-decoration: none;
-  color: #060810; background: #00f3ff; padding: 8px 14px;
+  color: #060810; background: #00f3ff; padding: 8px 14px; text-transform: uppercase;
   clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
 }
 

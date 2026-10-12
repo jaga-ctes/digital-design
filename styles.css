@@ -37,6 +37,28 @@ body { margin: 0; background: #060810; overflow-x: hidden; }
 a { color: #00f3ff; }
 a:hover { color: #7fe9f0; }
 
+/* Tokens de la capa compartida (jaga-shared.css) con la identidad de Digital Design */
+:root {
+  --jaga-accent: #00f3ff;
+  --jaga-on-accent: #060810;
+  --jaga-fg: #d9e7ea;
+  --jaga-fg-muted: #8a9aa0;
+  --jaga-bg: #060810;
+  --jaga-surface: rgba(11,15,26,0.7);
+  --jaga-border: rgba(0,243,255,.3);
+  --jaga-font-ui: 'Share Tech Mono', monospace;
+  --jaga-font-mono: 'VT323', monospace;
+}
+/* a:hover cambia el color de todos los enlaces: los botones compartidos conservan el suyo */
+a.jaga-btn:hover { color: var(--jaga-fg); }
+a.jaga-btn--primary:hover { color: var(--jaga-on-accent); box-shadow: 0 0 24px rgba(0,243,255,0.6); }
+/* Contacto y redactor con el aspecto del formulario anterior (etiquetas VT323 en cian claro) */
+.jaga-field label { font-size: 1.1rem; letter-spacing: 1px; color: #7fd9e0; }
+.jaga-field input, .jaga-field select, .jaga-field textarea { font-family: 'Share Tech Mono', monospace; font-size: 0.95rem; }
+.jaga-field textarea { resize: vertical; }
+.jaga-field select option { background: #060810; }
+.jaga-contact__meta { font-family: 'Share Tech Mono', monospace; color: #8a9aa0; }
+
 @keyframes jaga-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 @keyframes jaga-scan { 0% { background-position: 0 0; } 100% { background-position: 0 4px; } }
 @keyframes jaga-flicker { 0%, 92%, 100% { opacity: 1; } 94% { opacity: 0.6; } 96% { opacity: 1; } }

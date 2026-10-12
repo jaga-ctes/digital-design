@@ -98,9 +98,11 @@ footer .jaga-switcher { font-family: 'Share Tech Mono', monospace; font-size: 0.
 a.dd-brand { display: flex; align-items: center; text-decoration: none; color: #d9e7ea; }
 .dd-logo { height: 100px; width: auto; filter: drop-shadow(0 0 10px rgba(0,243,255,0.85)) drop-shadow(0 0 24px rgba(0,243,255,0.45)); }
 a.dd-nav-link, a.dd-nav-link:hover {
+  display: inline-flex; align-items: center; min-height: 44px;
   font-family: 'VT323', monospace; font-size: 1.3rem; letter-spacing: 1px; text-decoration: none; color: #d9e7ea;
 }
 a.dd-chip, a.dd-chip:hover {
+  display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box;
   font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; letter-spacing: 1px; text-decoration: none;
   color: #060810; background: #00f3ff; padding: 8px 14px;
   clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
@@ -196,9 +198,9 @@ a.dd-case__link { display: inline-flex; align-items: center; min-height: 44px; m
 .dd-footer__logo { height: 32px; width: auto; filter: drop-shadow(0 0 4px rgba(0,243,255,0.5)); }
 .dd-footer__name { font-family: 'VT323', monospace; font-size: 0.95rem; letter-spacing: 2px; color: #8a9aa0; }
 .dd-footer__nav { display: flex; flex-wrap: wrap; gap: 20px; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
-a.dd-footer__link, a.dd-footer__link:hover { text-decoration: none; color: #8a9aa0; }
+a.dd-footer__link, a.dd-footer__link:hover { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; text-decoration: none; color: #8a9aa0; }
 .dd-footer__switch { max-width: 1100px; margin: 16px auto 0; }
-.dd-footer__legal { max-width: 1100px; margin: 24px auto 0; font-family: 'Share Tech Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: #4a5a60; }
+.dd-footer__legal { max-width: 1100px; margin: 24px auto 0; font-family: 'Share Tech Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: #728288; } /* 5.2:1 sobre el pie (antes #4a5a60, 2.9:1) */
 
 /* ============================================================
    Navegación — menú mobile
@@ -206,7 +208,7 @@ a.dd-footer__link, a.dd-footer__link:hover { text-decoration: none; color: #8a9a
 #nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; }
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; gap: 6px;
-  width: 40px; height: 36px; padding: 0 8px;
+  box-sizing: border-box; width: 58px; height: 44px; padding: 0 8px;
   background: transparent; border: 1px solid rgba(0,243,255,0.4); cursor: pointer;
 }
 .nav-toggle span { display: block; height: 2px; width: 100%; background: #00f3ff; }

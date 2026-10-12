@@ -44,8 +44,7 @@
   "name": "Jagā Digital Design",
   "image": "https://design.jagasoluciones.com/img/jaga-logo.png",
   "url": "https://design.jagasoluciones.com/",
-  "telephone": "+543794870266",
-  "email": "jaga.corrientes@gmail.com",
+  "email": "contacto@jagasoluciones.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Corrientes",
@@ -232,26 +231,39 @@
         <p style="font-family:'VT323', monospace; font-size:1.1rem; letter-spacing:4px; color:#00f3ff; margin:0 0 8px;">// CONTACTO</p>
         <h2 style="font-family:'VT323', monospace; font-size:clamp(2rem,4vw,3rem); letter-spacing:1px; text-transform:uppercase; color:#fff; margin:0 0 24px;">Hablemos</h2>
         <p style="font-size:0.95rem; line-height:1.7; color:#8a9aa0; margin:0 0 28px; max-width:420px;">Contanos tu proyecto y coordinamos los próximos pasos.</p>
-        <div style="display:flex; flex-direction:column; gap:14px; font-family:'Share Tech Mono', monospace; font-size:1rem;">
-          <a href="tel:+543794870266" style="text-decoration:none; color:#d9e7ea; display:flex; align-items:center; gap:10px;"><span style="color:#00f3ff;">TEL:</span> +54 379 487 0266</a>
-          <a href="mailto:jaga.corrientes@gmail.com" style="text-decoration:none; color:#d9e7ea; display:flex; align-items:center; gap:10px;"><span style="color:#00f3ff;">MAIL:</span> jaga.corrientes@gmail.com</a>
-        </div>
+        <address class="jaga-contact" data-jaga-contact>
+          <a class="jaga-btn jaga-btn--primary" href="https://wa.me/5493794870266?text=Hola%2C%20quiero%20consultar%20por%20un%20sitio%20web" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+          <a class="jaga-btn" href="mailto:contacto@jagasoluciones.com">contacto@jagasoluciones.com</a>
+          <span class="jaga-contact__meta">Corrientes Capital</span>
+        </address>
       </div>
-      <form action="mailto:jaga.corrientes@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:18px;">
-        <label style="display:flex; flex-direction:column; gap:6px; font-family:'VT323', monospace; font-size:1.1rem; letter-spacing:1px; color:#7fd9e0;">
-          NOMBRE
-          <input type="text" name="Nombre" required style="background:rgba(11,15,26,0.7); border:1px solid rgba(0,243,255,0.3); color:#d9e7ea; font-family:'Share Tech Mono', monospace; font-size:0.95rem; padding:12px 14px; outline:none;">
-        </label>
-        <label style="display:flex; flex-direction:column; gap:6px; font-family:'VT323', monospace; font-size:1.1rem; letter-spacing:1px; color:#7fd9e0;">
-          EMAIL
-          <input type="email" name="Email" required style="background:rgba(11,15,26,0.7); border:1px solid rgba(0,243,255,0.3); color:#d9e7ea; font-family:'Share Tech Mono', monospace; font-size:0.95rem; padding:12px 14px; outline:none;">
-        </label>
-        <label style="display:flex; flex-direction:column; gap:6px; font-family:'VT323', monospace; font-size:1.1rem; letter-spacing:1px; color:#7fd9e0;">
-          MENSAJE
-          <textarea name="Mensaje" required rows="4" style="background:rgba(11,15,26,0.7); border:1px solid rgba(0,243,255,0.3); color:#d9e7ea; font-family:'Share Tech Mono', monospace; font-size:0.95rem; padding:12px 14px; outline:none; resize:vertical;"></textarea>
-        </label>
-        <button type="submit" class="btn-neon-fill" style="font-family:'VT323', monospace; font-size:1.3rem; letter-spacing:1px; color:#00f3ff; background:transparent; border:2px solid #00f3ff; padding:14px 28px; clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px); cursor:pointer; transition:all 0.25s ease;">ENVIAR MENSAJE</button>
-      </form>
+      <div class="jaga-composer" data-jaga-composer data-wa="5493794870266" data-mail="contacto@jagasoluciones.com" data-brand="Digital Design">
+        <div class="jaga-field">
+          <label for="c-nombre">Nombre / Empresa</label>
+          <input id="c-nombre" type="text" maxlength="80" autocomplete="organization" data-f-name>
+        </div>
+        <div class="jaga-field">
+          <label for="c-tipo">Tipo de proyecto</label>
+          <select id="c-tipo" data-f-type>
+            <option value="">Elegí una opción</option>
+            <option>Diseño web</option>
+            <option>App web o móvil</option>
+            <option>Presentación</option>
+            <option>Documento / CV</option>
+            <option>Seguridad desde el diseño</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="jaga-field">
+          <label for="c-msg">Contanos tu proyecto</label>
+          <textarea id="c-msg" rows="4" maxlength="600" data-f-msg></textarea>
+        </div>
+        <p class="jaga-hint">Se abre WhatsApp o tu app de correo con el mensaje listo; no enviamos nada hasta que vos lo mandes.</p>
+        <p class="jaga-actions">
+          <a class="jaga-btn jaga-btn--primary" data-send-wa href="https://wa.me/5493794870266" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+          <a class="jaga-btn" data-send-mail href="mailto:contacto@jagasoluciones.com">Enviar por mail</a>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -276,5 +288,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="composer.js" defer></script>
 </body>
 </html>

@@ -67,6 +67,8 @@
 </head>
 <body>
 
+<a class="jaga-skip" href="#inicio">Saltar al contenido</a>
+
 <div style="position:relative; background:#060810; font-family:'Share Tech Mono', monospace; color:#d9e7ea; min-height:100vh;">
 
   <div style="position:fixed; inset:0; pointer-events:none; z-index:2; opacity:0.5; mix-blend-mode:overlay; background-image:repeating-linear-gradient(rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,243,255,0.05) 3px); animation:jaga-scan 0.4s linear infinite;"></div>
@@ -83,8 +85,8 @@
       <a href="#servicios" style="font-family:'VT323', monospace; font-size:1.3rem; letter-spacing:1px; text-decoration:none; color:#d9e7ea;">SERVICIOS</a>
       <a href="#portafolio" style="font-family:'VT323', monospace; font-size:1.3rem; letter-spacing:1px; text-decoration:none; color:#d9e7ea;">PORTAFOLIO</a>
       <a href="#contacto" style="font-family:'VT323', monospace; font-size:1.3rem; letter-spacing:1px; text-decoration:none; color:#d9e7ea;">CONTACTO</a>
-      <a href="https://mantenimiento.jagasoluciones.com/" style="font-family:'Share Tech Mono', monospace; font-size:0.8rem; letter-spacing:1px; text-decoration:none; color:#060810; background:#00f3ff; padding:8px 14px; clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);">MANTENIMIENTO IT ↗</a>
-      <a href="https://security.jagasoluciones.com/" style="font-family:'Share Tech Mono', monospace; font-size:0.8rem; letter-spacing:1px; text-decoration:none; color:#060810; background:#00f3ff; padding:8px 14px; clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);">SEGURIDAD ↗</a>
+      <a href="https://mantenimiento.jagasoluciones.com/" style="font-family:'Share Tech Mono', monospace; font-size:0.8rem; letter-spacing:1px; text-decoration:none; color:#060810; background:#00f3ff; padding:8px 14px; clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);">Mantenimiento</a>
+      <a href="https://security.jagasoluciones.com/" style="font-family:'Share Tech Mono', monospace; font-size:0.8rem; letter-spacing:1px; text-decoration:none; color:#060810; background:#00f3ff; padding:8px 14px; clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);">Security</a>
     </nav>
 
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menú" style="flex-direction:column; justify-content:center; gap:6px; width:40px; height:36px; background:transparent; border:1px solid rgba(0,243,255,0.4); cursor:pointer; padding:0 8px;">
@@ -94,7 +96,8 @@
     </button>
   </header>
 
-  <section id="inicio" style="position:relative; z-index:3; text-align:center; padding:clamp(64px,12vw,140px) 24px clamp(48px,8vw,100px); background:radial-gradient(circle at 50% 0%, rgba(0,243,255,0.12) 0%, transparent 60%); overflow:hidden;">
+  <main id="inicio">
+  <section style="position:relative; z-index:3; text-align:center; padding:clamp(64px,12vw,140px) 24px clamp(48px,8vw,100px); background:radial-gradient(circle at 50% 0%, rgba(0,243,255,0.12) 0%, transparent 60%); overflow:hidden;">
     <img src="img/jaga-logo.png" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:min(900px,90vw); opacity:0.05; pointer-events:none; z-index:0;">
     <div style="position:relative; z-index:1;">
       <p style="font-family:'VT323', monospace; font-size:clamp(1.2rem,3.5vw,2.3rem); letter-spacing:5px; color:#00f3ff; text-shadow:0 0 10px rgba(0,243,255,0.85), 0 0 24px rgba(0,243,255,0.5); margin:0 0 20px; animation:jaga-flicker 6s infinite;">// JAGĀ_DIGITAL_DESIGN <span style="animation:jaga-blink 1s step-end infinite;">█</span></p>
@@ -267,6 +270,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer style="position:relative; z-index:3; padding:40px 32px; background:#020308; border-top:2px solid rgba(255,46,108,0.4);">
     <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px;">
       <div style="display:flex; align-items:center; gap:12px;">
@@ -278,11 +283,18 @@
         <a href="#servicios" style="text-decoration:none; color:#8a9aa0;">SERVICIOS</a>
         <a href="#portafolio" style="text-decoration:none; color:#8a9aa0;">PORTAFOLIO</a>
         <a href="#contacto" style="text-decoration:none; color:#8a9aa0;">CONTACTO</a>
-        <a href="https://mantenimiento.jagasoluciones.com/" style="text-decoration:none; color:#ff2e6c;">MANTENIMIENTO IT ↗</a>
-        <a href="https://security.jagasoluciones.com/" style="text-decoration:none; color:#00f3ff;">SEGURIDAD ↗</a>
       </nav>
     </div>
-    <p style="max-width:1100px; margin:24px auto 0; font-family:'Share Tech Mono', monospace; font-size:0.75rem; letter-spacing:1px; color:#4a5a60;">© 2026 JAGĀ DIGITAL DESIGN — SISTEMA EN LÍNEA</p>
+    <div style="max-width:1100px; margin:16px auto 0;">
+      <nav class="jaga-switcher" aria-label="Marcas Jagā" data-jaga-switcher>
+        <ul>
+          <li><a href="https://mantenimiento.jagasoluciones.com/">Mantenimiento</a></li>
+          <li><a href="https://design.jagasoluciones.com/" aria-current="page">Digital Design</a></li>
+          <li><a href="https://security.jagasoluciones.com/">Security</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p style="max-width:1100px; margin:24px auto 0; font-family:'Share Tech Mono', monospace; font-size:0.75rem; letter-spacing:1px; color:#4a5a60;">© 2026 Jagā — Digital Design · Corrientes, Argentina · SISTEMA EN LÍNEA</p>
   </footer>
 
 </div>

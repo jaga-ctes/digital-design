@@ -36,7 +36,7 @@
 <link rel="preload" href="fonts/share-tech-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="jaga-shared.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261014">
 
 <!-- JSON-LD: LocalBusiness -->
 <script type="application/ld+json">
@@ -78,7 +78,7 @@
   <div class="dd-grid-bg"></div>
 
   <header class="dd-header">
-    <a class="dd-brand" href="#inicio">
+    <a class="dd-brand" id="arriba" href="#inicio">
       <img class="dd-logo" src="img/jaga-logo.png" width="367" height="200" alt="Jagā — digital design">
     </a>
 
@@ -307,12 +307,19 @@
         </ul>
       </nav>
     </div>
+    <div class="dd-footer__home">
+      <a class="dd-footer__back" href="https://jagasoluciones.com/" aria-label="Volver al inicio de jagasoluciones.com"><span aria-hidden="true">←</span> Volver al inicio</a>
+    </div>
     <p class="dd-footer__legal">© 2026 Jagā — Digital Design · Corrientes, Argentina · SISTEMA EN LÍNEA</p>
   </footer>
 
+  <a class="dd-to-top" id="volver-arriba" href="#arriba" aria-label="Volver arriba">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20V5M5 11.5L12 4.5l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path></svg>
+  </a>
+
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261014"></script>
 <script src="composer.js" defer></script>
 </body>
 </html>

@@ -203,6 +203,32 @@ a.dd-case__link { display: inline-flex; align-items: center; min-height: 44px; m
 a.dd-footer__link, a.dd-footer__link:hover { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; text-decoration: none; color: #8a9aa0; }
 .dd-footer__switch { max-width: 1100px; margin: 16px auto 0; }
 .dd-footer__legal { max-width: 1100px; margin: 24px auto 0; font-family: 'Share Tech Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: #728288; } /* 5.2:1 sobre el pie (antes #4a5a60, 2.9:1) */
+/* Enlace al hub (jagasoluciones.com), en su propia fila para no tocar el selector de marcas */
+.dd-footer__home { max-width: 1100px; margin: 16px auto 0; }
+a.dd-footer__back, a.dd-footer__back:hover {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; letter-spacing: 1px; text-decoration: none; color: #00f3ff;
+}
+a.dd-footer__back:hover { text-decoration: underline; }
+/* Aire bajo el pie para que la flecha flotante nunca tape sus enlaces al final de la página */
+.dd-footer { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+
+/* Flecha flotante "Volver arriba": oculta (y fuera del orden de Tab) hasta que script.js le pone .is-visible */
+.dd-to-top {
+  position: fixed; z-index: 40;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; box-sizing: border-box;
+  color: #00f3ff; background: #060810; border: 2px solid #00f3ff; box-shadow: 0 0 14px rgba(0,243,255,0.45);
+  visibility: hidden; opacity: 0;
+}
+.dd-to-top.is-visible { visibility: visible; opacity: 1; }
+a.dd-to-top:hover { color: #060810; background: #00f3ff; }
+.dd-to-top svg { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  .dd-to-top { transition: opacity 0.2s ease, visibility 0s linear 0.2s; }
+  .dd-to-top.is-visible { transition: opacity 0.2s ease, visibility 0s; }
+}
 
 /* ============================================================
    Navegación — menú mobile
